@@ -2,9 +2,11 @@
 - hosts: all
   sudo:  true
   vars:
-    doc_root: /var/www/web
+    project_root: /var/www
+    doc_root: "{{ project_root }}/web"
     sys_packages:
       - mcrypt
+    php_date_timezone: "UTC"
     php_packages:
       - { name: dev, package: php5-dev }
       - { name: pear, package: php-pear }
@@ -20,6 +22,7 @@
       - { name: "jsmin", package: "pecl.php.net/jsmin-beta" }
       - { name: "mongo", package: "pecl.php.net/mongo" }
       - { name: "xhprof", package: "pecl.php.net/xhprof-beta" }
+      - { name: "stats", package: "pecl.php.net/stats" }
     php_ppa: php5
   roles:
     - init
