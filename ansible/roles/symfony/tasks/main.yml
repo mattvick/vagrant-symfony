@@ -6,8 +6,11 @@
 - name: Create database
   command: /usr/bin/php app/console doctrine:database:create --no-interaction chdir={{ project_root }}
 
-- name: Create schema
-  command: /usr/bin/php app/console doctrine:schema:create --no-interaction chdir={{ project_root }}
+# - name: Create schema
+#   command: /usr/bin/php app/console doctrine:schema:create --no-interaction chdir={{ project_root }}
+
+- name: Migrate database
+  command: /usr/bin/php app/console doctrine:migration:migrate --no-interaction chdir={{ project_root }}
 
 - name: Load fixtures
   command: /usr/bin/php app/console doctrine:fixtures:load --no-interaction chdir={{ project_root }}

@@ -41,3 +41,4 @@
     - rabbitmq
     - redis
     - memcached
+    - symfony
