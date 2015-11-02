@@ -11,11 +11,11 @@
 - name: Add root user from anywhere to MySQL
   command: mysql -u root -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%'; FLUSH PRIVILEGES;"
 
-- name: Create optimcore MySQL user
-  command: mysql -u root -e "CREATE USER 'optimcore'@'%' IDENTIFIED BY 'optimcore'; FLUSH PRIVILEGES;"
+# - name: Create optimcore MySQL user
+#   command: mysql -u root -e "CREATE USER 'optimcore'@'%' IDENTIFIED BY 'optimcore'; FLUSH PRIVILEGES;"
 
-- name: Add optimcore user from anywhere to MySQL
-  command: mysql -u root -e "GRANT ALL PRIVILEGES ON *.* TO 'optimcore'@'%'; FLUSH PRIVILEGES;"
+- name: Create and add optimcore user from anywhere to MySQL
+  command: mysql -u root -e "GRANT ALL PRIVILEGES ON *.* TO 'optimcore'@'%' IDENTIFIED BY 'optimcore'; FLUSH PRIVILEGES;"
 
 - name: Create MySQL database optimcore
   command: mysql -u root -e "CREATE DATABASE IF NOT EXISTS optimcore;"
