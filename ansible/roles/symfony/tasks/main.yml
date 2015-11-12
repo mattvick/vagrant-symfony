@@ -14,3 +14,6 @@
 
 # - name: Load fixtures
 #   command: /usr/bin/php app/console doctrine:fixtures:load --no-interaction chdir={{ project_root }}
+
+- name: Insert plans
+  command: mysql -u root -e "INSERT INTO optimcore.plan (`id`, `visit_limit`, `name`, `description`, `billing_frequency`, `price`, `currency_iso_code`) VALUES ('5tpb', 10000, 'Premium', 'The premium plan', 1, '35.00', 'USD'), ('free', 1000, 'Free', 'The free plan', NULL, NULL, NULL), ('ks2m', 50000, 'Premium Pro', 'The premium pro plan', 1, '150.00', 'USD');"
