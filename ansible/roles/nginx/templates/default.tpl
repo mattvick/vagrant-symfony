@@ -1,7 +1,7 @@
 server {
     listen 80;
 
-    server_name symfony;
+    server_name  symfony optimcore.com  www.optimcore.com optimcore.cz  www.optimcore.cz optimcore.de  www.optimcore.de optimcore.hu  www.optimcore.hu optimcore.sk  www.optimcore.sk;
     root        {{ doc_root }};
 
     error_log   /var/log/nginx/symfony/error.log;
