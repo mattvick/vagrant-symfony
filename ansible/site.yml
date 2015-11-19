@@ -24,6 +24,7 @@
       - { name: "mongo", package: "pecl.php.net/mongo" }
       - { name: "xhprof", package: "pecl.php.net/xhprof-beta" }
       - { name: "stats", package: "pecl.php.net/stats" }
+      - { name: "intl", package: "pecl.php.net/intl" }
     php_ppa: php5
   roles:
     - init
