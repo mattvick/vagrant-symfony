@@ -19,6 +19,3 @@
 
 - name: Create MySQL database optimcore
   command: mysql -u root -e "CREATE DATABASE IF NOT EXISTS optimcore;"
-
-- name: Load plans
-  command: mysql -u root -e "INSERT INTO `optimcore`.`plan` (`id`, `braintree_id`, `tier`, `locale`, `visits`, `billing_frequency`, `price`, `currency_iso_code`) VALUES (1, NULL, 1, 'en', 1000, 1, '0.00', 'USD'), (2, '5tpb', 2, 'en', 10000, 1, '35.00', 'USD'), (3, 'ks2m', 3, 'en', 50000, 1, '150.00', 'USD'), (4, NULL, 4, 'en', 500000, 1, '999.00', 'USD'), (5, NULL, 1, 'cs', 1000, 1, '0.00', 'CZK'), (6, '7yrm', 2, 'cs', 10000, 1, '890.00', 'CZK'), (7, 'nx4w', 3, 'cs', 50000, 1, '3800.00', 'CZK'), (8, NULL, 4, 'cs', 500000, 1, '25000.00', 'CZK'), (9, NULL, 1, 'sk', 1000, 1, '0.00', 'EUR'), (10, 'hgqg', 2, 'sk', 10000, 1, '32.80', 'EUR'), (11, '9hjb', 3, 'sk', 50000, 1, '140.00', 'EUR'), (12, NULL, 4, 'sk', 500000, 1, '999.00', 'EUR'), (13, NULL, 1, 'hu', 1000, 1, '0.00', 'EUR'), (14, 'tfh6', 2, 'hu', 10000, 1, '32.80', 'EUR'), (15, 'dh4w', 3, 'hu', 50000, 1, '140.00', 'EUR'), (16, NULL, 4, 'hu', 500000, 1, '999.00', 'EUR'), (17, NULL, 1, 'de', 1000, 1, '0.00', 'EUR'), (18, 'mgb2', 2, 'de', 10000, 1, '32.80', 'EUR'), (19, '2sg2', 3, 'de', 50000, 1, '140.00', 'EUR'), (20, NULL, 4, 'de', 500000, 1, '999.00', 'EUR')"
