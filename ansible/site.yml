@@ -21,11 +21,11 @@
       - { name: gd, package: php5-gd }
       - { name: intl, package: php5-intl }
     php_extensions:
-      - { name: "jsmin", package: "pecl.php.net/jsmin-beta" }
-      - { name: "mongo", package: "pecl.php.net/mongo" }
-      - { name: "xhprof", package: "pecl.php.net/xhprof-beta" }
-      - { name: "stats", package: "pecl.php.net/stats" }
-      - { name: "intl", package: "pecl.php.net/intl" }
+      - { name: "jsmin", package: "pecl.php.net/jsmin", version: "beta" }
+      - { name: "mongo", package: "pecl.php.net/mongo", version: "1.6.12" }
+      - { name: "xhprof", package: "pecl.php.net/xhprof", version: "beta" }
+      - { name: "stats", package: "pecl.php.net/stats", version: "1.0.3" }
+      - { name: "intl", package: "pecl.php.net/intl", version: "3.0.0" }
     php_ppa: php5
   roles:
     - init
@@ -41,7 +41,7 @@
     - curl
     - sqlite
     - wget
-    - rabbitmq
+    # - rabbitmq
     - redis
     - memcached
     - symfony
